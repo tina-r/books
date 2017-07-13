@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Buchbeschreibung{% endblock %}
+
+{% block content %}
+
+<h1>Buchbeschreibung</h1>
+<style> 
+</style>
+
+{% for content_list in content_list %}
+    <div>
+	<p>{{ titel_liste.published_date }}</p>
+	<a>{{ content_list.title}}: </a> 
+        <a>{{ content_list.text }}</a> <br>
+    </div>
+{% endfor %}
+
+ 
+<ul id="menu">
+<li><a href="/buecher/titel_liste/">zurück zu Titel</a></li>
+</ul>
+
+{% endblock %}

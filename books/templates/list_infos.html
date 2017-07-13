@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titel_liste.title|escape }}{% endblock %}
+
+{% block content %}
+    <p>{{ info_list.author|escape|urlize }}</p>
+    <p>{{ info_list.pub_date|escape|urlize }}</p>
+ 
+<ul id="menu">
+<li><a href="/buecher/titel_liste/">zurück zu Titel</a></li>
+</ul>
+
+{% endblock %}
+

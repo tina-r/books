@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Buchtitel{% endblock %}
+
+{% block content %}
+
+<h1>Zu löschendes Buch</h1>
+<style> 
+</style>
+
+{% for delete_list in delete_list %}
+    <div>
+        <li><a href="{{ delete_list.id }}/">{{ delete_list.title|escape }}</a></li>
+    </div>
+{% endfor %}
+
+ 
+<ul id="menu">
+<li><a href="/buecher/titel_liste/">zurück zur Bücherliste</a></li>
+</ul>
+
+{% endblock %}

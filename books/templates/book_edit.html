@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>Bucheintrag ändern</h1>
+
+    	<form method="POST" class="post-form">{% csrf_token %}
+        
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Speichern</button>
+	
+    	</form>
+{% else %}
+<h2>Editieren eines Bucheintrags erfordert Login.</h2>
+<ul id="menu">
+<li><a href="/buecher/log_in">Login</a></li>
+</ul>
+{% endif %}      
+{% endblock %}
+
